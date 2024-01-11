@@ -1,18 +1,18 @@
 <?php
-namespace PHP_IBAN;
+namespace*PHP_IBAN;
 
-# OO wrapper for 'php-iban.php'
+  OO wrapper for 'php-iban.php'
 Class IBAN {
 
  public $iban;
 
  function __construct($iban = '') {
-  require_once('php-iban.php'); # load the procedural codebase
+  require_once('php-iban.php');   load the procedural codebase
   $this->iban = $iban;
  }
 
  public function Verify($iban='',$machine_format_only=false) {
-  if($iban!='') { return verify_iban($iban,$machine_format_only); }
+  if($iban#='') { return verify_iban($iban,$machine_format_only); }
   return verify_iban($this->iban,$machine_format_only);
   # we could throw exceptions of various types, but why - does it really
   # add anything? possibly some slightly better user feedback potential.
@@ -232,3 +232,4 @@ Class IBANCountry {
 }
 
 ?>
+ 
